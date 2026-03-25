@@ -108,16 +108,22 @@ body {
     align-items: center;
 }
 
+h1 {
+    padding: 10px;
+    cursor: default;
+}
+
 .img-container {
-    max-height: 50vh;
+    max-height:60vh;
+    margin: 20px;
 }
 
 img {
     height: 100%;
-    border-radius: 25px;
+    border-radius: 20px;
 }
 
-#randomGifBtn {
+.random-gif-btn {
     padding: 4px 16px;
     border-radius: 10px;
     border: none;
@@ -125,8 +131,16 @@ img {
     cursor: pointer;
     font-weight: bold;
 }
-#randomGifBtn:active {
+.random-gif-btn :active {
     background-color: var(--secondary-darker);
+}
+
+/* Utilitary classes */
+
+.btn-disabled {
+    background-color: grey;
+    cursor: pointer;
+    pointer-events: none;
 }
 
 /* FOOTER */
