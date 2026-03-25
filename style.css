@@ -128,3 +128,31 @@ img {
 #randomGifBtn:active {
     background-color: var(--secondary-darker);
 }
+
+/* FOOTER */
+
+footer {
+  margin-top: auto;
+  height: 50px;
+  width: 100%;
+  background-color: var(--primary-darkest);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+footer > * {
+  background-color: transparent;
+}
+
+.github-logo {
+  transition: 0.1s ease-in-out;
+  height: 30px;
+  width: 30px;
+  margin-left: 20px;
+}
+.github-logo:hover {
+  transform: scale(1.1);
+}
