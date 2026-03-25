@@ -147,7 +147,7 @@ h1 {
 
 .gif-container {
     position: relative;
-    max-height:60vh;
+    height: 50vh;
     margin: 20px;
 }
 

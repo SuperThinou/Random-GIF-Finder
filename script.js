@@ -1,3 +1,4 @@
+const searchBtn = document.getElementById("searchBtn");
 const searchBar = document.getElementById("searchBar");
 const loader = document.querySelector(".loader");
 const gif = document.getElementById("gif");
@@ -25,13 +26,16 @@ function loadGif() {
 }
 
 function getApiUrl() {
+  const searchValue = searchBar.value.trim();
   const mode = modeSelector.value;
 
-  if (mode === "random") {
+  const query = searchValue !== "" ? searchValue : mode;
+
+  if (query === "random") {
     return `https://api.giphy.com/v1/gifs/random?api_key=n5AUEykERIPKKOwuk3CDQUaRHE0vzvfY`;
   }
 
-  return `https://api.giphy.com/v1/gifs/translate?api_key=n5AUEykERIPKKOwuk3CDQUaRHE0vzvfY&s=${mode}`;
+  return `https://api.giphy.com/v1/gifs/translate?api_key=n5AUEykERIPKKOwuk3CDQUaRHE0vzvfY&s=${query}`;
 }
 
 function addLoadingStyle() {
@@ -49,6 +53,16 @@ function removeLoadingStyle() {
 }
 
 loadGif();
+
+searchBtn.addEventListener("click", () => {
+  loadGif();
+});
+
+searchBar.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    loadGif();
+  }
+});
 
 randomGifBtn.addEventListener("click", loadGif);
 
