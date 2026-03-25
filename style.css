@@ -108,6 +108,15 @@ body {
     align-items: center;
 }
 
+.img-container {
+    max-height: 50vh;
+}
+
+img {
+    height: 100%;
+    border-radius: 25px;
+}
+
 #randomGifBtn {
     padding: 4px 16px;
     border-radius: 10px;
