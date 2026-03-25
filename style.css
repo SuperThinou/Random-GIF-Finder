@@ -114,6 +114,7 @@ h1 {
 }
 
 .img-container {
+    position: relative;
     max-height:60vh;
     margin: 20px;
 }
@@ -121,6 +122,26 @@ h1 {
 img {
     height: 100%;
     border-radius: 20px;
+}
+
+/* LOADER */
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ccc;
+  border-top: 4px solid var(--secondary-darker);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
 .random-gif-btn {
@@ -142,6 +163,11 @@ img {
     cursor: pointer;
     pointer-events: none;
 }
+
+.hidden {
+  display: none;
+}
+
 
 /* FOOTER */
 
