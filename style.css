@@ -113,6 +113,33 @@ h1 {
     cursor: default;
 }
 
+.search-bar-container {
+    display: flex;
+    position: relative
+}
+
+.search-bar-container .icon {
+  height: 30px;
+  position: absolute;
+  margin-left: 4px;
+  margin-top: 2px;
+  background-color: transparent;
+}
+
+.search-bar-container div {
+  display: flex;
+  align-items: center;
+}
+
+#searchBar {
+  padding: 4px 10px;
+  padding-left: 40px;;
+  border: none;
+  border-radius: 15px;
+  background-color: var(--primary-light);
+  width: min(250px, 40vw);
+}
+
 .gif-container {
     position: relative;
     max-height:60vh;
