@@ -62,11 +62,11 @@ searchBtn.addEventListener("click", () => {
 });
 
 searchBar.addEventListener("keydown", (e) => {
-  if (searchBar.value.trim() === "") return;
-  searchBar.value = "";
-
   if (e.key === "Enter") {
+    if (searchBar.value.trim() === "") return;
+
     loadGif();
+    searchBar.value = ""; 
   }
 });
 
