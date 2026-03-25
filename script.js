@@ -1,3 +1,4 @@
+const searchBar = document.getElementById("searchBar");
 const loader = document.querySelector(".loader");
 const gif = document.getElementById("gif");
 const randomGifBtn = document.getElementById("randomGifBtn");
